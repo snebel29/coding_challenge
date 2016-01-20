@@ -1,0 +1,7 @@
+# Write a CLI that, given two strings consisting of a word or words made up of letters "lowercase", outputs an integer with the number of times I will need the first word to to build the second word once, output an error if the first word is not valid to build the second time.
+
+Examples:
+
+cli 'coffeole' 'feo' -> 1
+cli 'window' 'chair' -> error
+cli 'bookcase' 'bbookcase' -> 2
