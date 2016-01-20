@@ -36,13 +36,17 @@ def how_many_sources?(source, word)
 end
 
 
-if ARGV.length < 2
-    puts "Argument count error"
-    puts "#{__FILE__} <firstletter> <secondletter>"
-    exit(1)
+if __FILE__ == $0
+
+    if ARGV.length < 2
+        puts "Argument count error"
+        puts "#{__FILE__} <firstletter> <secondletter>"
+        exit(1)
+    end
+
+    source = ARGV[0].gsub(' ','') 
+    word = ARGV[1].gsub(' ','')
+
+    how_many_sources?(source, word)
+
 end
-
-source = ARGV[0].gsub(' ','') 
-word = ARGV[1].gsub(' ','')
-
-how_many_sources?(source, word)
