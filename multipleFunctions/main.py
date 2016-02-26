@@ -112,6 +112,15 @@ def distinct_pair(seq):
     return odd_pairs
     
 
+# Write a Python function that takes a sequence of numbers and determines
+# if all the numbers are different from each other (that is, they are distinct).
+
+def all_distinct(seq):
+    if len(seq) == len(set(seq)):
+        return True
+    else:
+        return False
+
 if __name__ == '__main__':
     #print(is_multiplo(300,5))
     #print(if_even(3))
@@ -121,5 +130,7 @@ if __name__ == '__main__':
     #print(total_odd(5))
     #print(references())
     #print(ownchoice([1,2,3,4,5,6]))
-    print(distinct_pair([1,2,3,4,5,6]))
+    #print(distinct_pair([1,2,3,4,5,6]))
+    print(all_distinct([1,2,3,4,5,6,7,8,9]))
+    print(all_distinct([1,1,2,3,4,5,6,7,8,9,9]))
     pass
