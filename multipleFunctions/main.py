@@ -96,6 +96,21 @@ for i in range(1,len(n)+1):
 print(nn)
 print(list(reversed(n)))
 
+# Write a short Python function that takes a sequence of integer values and
+# determines if there is a distinct pair of numbers in the sequence whose
+# product is odd.
+
+def distinct_pair(seq):
+    odd_pairs = set()
+    for i in range(len(seq)):
+        for j in range(len(seq)):
+            if i != j:
+                if (seq[i] + seq[j]) % 2 != 0:
+                    pair = frozenset([seq[i], seq[j]])
+                    odd_pairs.add(pair)
+
+    return odd_pairs
+    
 
 if __name__ == '__main__':
     #print(is_multiplo(300,5))
@@ -106,4 +121,5 @@ if __name__ == '__main__':
     #print(total_odd(5))
     #print(references())
     #print(ownchoice([1,2,3,4,5,6]))
+    print(distinct_pair([1,2,3,4,5,6]))
     pass
